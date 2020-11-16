@@ -1,6 +1,3 @@
-FROM alpine:3.5
+FROM amazon/aws-cli:latest
 
-ADD ./workdir/contacts /usr/bin/contacts
-ADD ./db/migrations /migrations
-
-ENTRYPOINT contacts
+RUN apt-get update && apt-get install -y tar
